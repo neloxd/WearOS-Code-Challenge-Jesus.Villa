@@ -31,6 +31,7 @@ lottie = "6.3.0"
 fragmentKtx = "1.5.6"
 roomRxjava2 = "2.6.1"
 timberVersion = "5.0.1"
+wearInput = "1.1.0"
 
 [libraries]
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRxjava2" }
@@ -71,9 +72,10 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 retrofit_converter_gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
 retrofit_rxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofitVersion" }
 androidx-hilt-compose = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version = '1.2.0'}
+androidx-wear-input = { group = "androidx.wear", name = "wear-input", version.ref = "wearInput" }
 
 #hilt = { group = 'com.google.dagger', name = 'hilt-android', version = '2.51.1'}
-#androidx-hilt = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version = '1.2.0'}
+androidx-hilt = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version = '1.2.0'}
 #hilt-android-compiler = { group = 'com.google.dagger', name = 'hilt-compiler', version = '2.51.1' }
 
 [plugins]

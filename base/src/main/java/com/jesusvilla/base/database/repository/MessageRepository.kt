@@ -20,6 +20,16 @@ class MessageRepository @Inject constructor(
     }
 
     @WorkerThread
+    suspend fun removeMessage(): DataBaseResource<Unit> {
+        return try {
+            messageDao.removeAll()
+            DataBaseResource.Success(Unit)
+        } catch (e: Throwable) {
+            DataBaseResource.Error(e)
+        }
+    }
+
+    @WorkerThread
     suspend fun saveMessages(list: List<MessageEntity>): DataBaseResource<List<Long>> {
         return try {
             DataBaseResource.Success(messageDao.insertMessages(list))

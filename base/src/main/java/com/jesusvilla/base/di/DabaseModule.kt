@@ -23,7 +23,7 @@ class DataBaseModule {
             context,
             DataBase::class.java,
             DataBaseConfig.dataBaseName
-        ).build()
+        ).allowMainThreadQueries().build()
     }
 
     @Provides
