@@ -1,0 +1,69 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    namespace 'com.jesusvilla.base'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 30
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation libs.core.ktx
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.ui
+    implementation libs.ui.tooling.preview
+    implementation libs.compose.material
+    implementation libs.compose.foundation
+
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.android.dagger.hilt
+    kapt libs.android.dagger.hilt.compiler
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.androidx.fragment.ktx
+    implementation libs.androidx.dagger.hilt.navigation.fragment
+    implementation libs.androidx.hilt.compose
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.rxjava2)
+    implementation(libs.retrofit.converter.gson)
+
+    def room_version = "2.6.1"
+    implementation libs.androidx.room.runtime
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+}

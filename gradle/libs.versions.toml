@@ -1,0 +1,90 @@
+[versions]
+agp = "8.1.2"
+kotlin = "1.9.0"
+playServicesWearable = "18.2.0"
+composeBom = "2024.04.01"
+composeMaterial = "1.2.1"
+composeFoundation = "1.2.1"
+constraintlayout = "2.1.4"
+activityCompose = "1.7.2"
+coreSplashscreen = "1.0.1"
+tiles = "1.1.0"
+tilesMaterial = "1.1.0"
+androidDaggerHiltVersion = "2.51.1"
+androidxDaggerHiltVersion = "1.0.0"
+lifecycleViewmodelKtx = "2.7.0"
+navigationVersion = "2.7.7"
+horologistComposeTools = "0.4.8"
+horologistTiles = "0.4.8"
+watchfaceComplicationsDataSourceKtx = "1.1.1"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+retrofitVersion = "2.9.0"
+lifecycle-livedata-ktx = "2.7.0"
+activity = "1.8.2"
+splash-screen = "1.0.1"
+lottie = "6.3.0"
+fragmentKtx = "1.5.6"
+roomRxjava2 = "2.6.1"
+timberVersion = "5.0.1"
+
+[libraries]
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRxjava2" }
+androidx-room-rxjava2 = { module = "androidx.room:room-rxjava2", version.ref = "roomRxjava2" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberVersion" }
+play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "playServicesWearable" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+ui = { group = "androidx.compose.ui", name = "ui" }
+ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx_navigation_fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationVersion" }
+compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
+compose-foundation = { group = "androidx.wear.compose", name = "compose-foundation", version.ref = "composeFoundation" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+tiles = { group = "androidx.wear.tiles", name = "tiles", version.ref = "tiles" }
+tiles-material = { group = "androidx.wear.tiles", name = "tiles-material", version.ref = "tilesMaterial" }
+horologist-compose-tools = { group = "com.google.android.horologist", name = "horologist-compose-tools", version.ref = "horologistComposeTools" }
+horologist-tiles = { group = "com.google.android.horologist", name = "horologist-tiles", version.ref = "horologistTiles" }
+watchface-complications-data-source-ktx = { group = "androidx.wear.watchface", name = "watchface-complications-data-source-ktx", version.ref = "watchfaceComplicationsDataSourceKtx" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+android_dagger_hilt_gradle = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "androidDaggerHiltVersion" }
+android_dagger_hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "androidDaggerHiltVersion" }
+android_dagger_hilt_compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "androidDaggerHiltVersion" }
+androidx_dagger_hilt_navigation_fragment = { group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref = "androidxDaggerHiltVersion" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle-livedata-ktx" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofit_converter_gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+retrofit_rxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "retrofitVersion" }
+androidx-hilt-compose = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version = '1.2.0'}
+
+#hilt = { group = 'com.google.dagger', name = 'hilt-android', version = '2.51.1'}
+#androidx-hilt = { group = 'androidx.hilt', name = 'hilt-navigation-compose', version = '1.2.0'}
+#hilt-android-compiler = { group = 'com.google.dagger', name = 'hilt-compiler', version = '2.51.1' }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+daggerHilt = { id = "android_dagger_hilt_gradle", version.ref = "androidDaggerHiltVersion" }
+
+#kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+#navigation = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigationVersion" }
+#compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+#ksp = { id = "com.google.devtools.ksp", version = "2.0.0-1.0.23" }
+#dagger-hilt = { id = "com.google.dagger.hilt.android", version = "2.51.1" }
+
